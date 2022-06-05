@@ -1,20 +1,28 @@
 const names = ["Halo", "Angel", "Nyoman", "Ketut", "Aisyah"];
 
-// TODO: Fungsi utama
+// Fungsi utama
 // Menerima 2 parameter: list nama dan callback sort
 // Mengembalikan array of string dengan format:
 // "1. Nama"
 // "2. Nama"
 // ...
-const sorter = null;
+const sorter = (data, operation) => {
+  let sortedData = operation(data);
+  return sortedData.map((data, i) => `${i + 1}. ${data}`);
+};
 
-// TODO: Fungsi untuk mengurutkan array of string secara ascending
+// Fungsi untuk mengurutkan array of string secara ascending
 // mengembalikan array yang sudah diurutkan
-const sortAscending = null;
+const sortAscending = (data) => {
+  return data.sort();
+};
 
-// TODO: Fungsi untuk mengurutkan array of string secara descending
+// Fungsi untuk mengurutkan array of string secara descending
 // mengembalikan array yang sudah diurutkan
-const sortDescending = null;
+const sortDescending = (data) => {
+  data.sort();
+  return data.reverse();
+};
 
 // ! JANGAN DIMODIFIKASI
 (function main() {
